@@ -73,7 +73,7 @@ namespace AngularJStore.App.Controllers.Api
                 Company = customerAdded.Company
             };
 
-            return Ok(new { Date = customerToReturn });
+            return Ok(new { Data = customerToReturn });
         }
 
         public IHttpActionResult Edit(EditCustomer customer)

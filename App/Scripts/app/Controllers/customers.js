@@ -50,7 +50,7 @@
         };
 
         vm.deleteCustomer = function (customer) {
-            $http.delete('api/Customer/Delete', { id: customer.Id })
+            $http.post('api/Customer/Delete', { id: customer.Id })
                 .then(function (response) {
                     var deletedIndex = vm.customers.findIndex(function (e) { return e.Id === customer.Id; });
                     vm.customers.splice(deletedIndex, 1);
